@@ -1,0 +1,20 @@
+body,html{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --bg-scale: 1.42;
+  --bg-gradient-size: calc(var(--bg-scale) * 100%);
+  --bg-image-header:  url(../public/images/bg-main-dark-1440w.jpg);
+  --bg-image-footer: url(../public/images/bg-footer-dark-1440w.jpg);
+  --body-background-color: #090b11;
+}
+
+#root{
+  min-height: 200vh;
+  background:   
+  var(--bg-image-footer) bottom center / var(--bg-gradient-size) no-repeat,
+  var(--bg-image-header) top center / var(--bg-gradient-size) no-repeat,
+  var(--body-background-color);
+}
