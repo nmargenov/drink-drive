@@ -38,7 +38,7 @@ export const Header = () =>{
         <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
             <ul className={styles['blurried']}>
                 <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
-                <li>Услуги</li>
+                <li onClick={()=>{scrollToElement('work')}}>Как работим</li>
                 <li>Цени</li>
                 <li>Поръчай</li>
             </ul>
