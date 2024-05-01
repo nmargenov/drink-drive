@@ -30,12 +30,16 @@ export const Header = () =>{
     };
   }, []);
 
+  const scrollToTop = () =>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 
     return(
         <>
     <header className={styles['blurried']}>
         <div className={styles['logo-div']}>
-            <img src='/images/logo.avif' alt="" />
+            <img onClick={scrollToTop} src='/images/logo.avif' alt="" />
         </div>
         <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
             <ul className={styles['blurried']}>
@@ -51,6 +55,16 @@ export const Header = () =>{
     </header>
     <div className={styles["background"]}>
         <img src="/images/carmain.png" alt="" />
+        <div className={styles["info"]}>
+          <div className={styles["text"]}>
+            <h1>Вие пиете, ние Ви прибираме</h1>
+            <h2><span>НЕ</span> шофирайте пили!</h2>
+          </div>
+          <div className={styles["buttons"]}>
+            <button onClick={()=>{window.location.href="tel:+359884000403"}}>Обади ни се</button>
+            <button>Поръчай онлайн</button>
+          </div>
+        </div>
     </div>
     </>
 );

@@ -59,6 +59,7 @@ li:active{
 
 header img{
     width: 100%;
+    cursor: pointer;
 }
 
 header img:hover{
@@ -80,6 +81,65 @@ header img:hover{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+
+.info{
+    font-family: 'Roboto Mono';
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+}
+
+.text{
+    color:white;
+    text-align: center;
+}
+
+span{
+    color:red;
+}
+
+.text h1{
+    text-transform: uppercase;
+    font-size: 64px;
+    word-spacing: -20px;
+    margin: 0;
+}
+
+.text h2{
+    font-size: 32px;
+    word-spacing: -5px;
+    margin: 0 0 20px 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+
+button{
+    font-family: 'Roboto Mono';
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:white;
+    background-color: #2298d8;
+    border: 1px solid #2298d8;
+    font-size: 18px;
+    border: none;
+    width: 200px;
+    height: 40px;
+}
+
+button:hover{
+    background-color: #67aed4;
+}
+button:active{
+    opacity: 0.7;
+}
 @media only screen and (max-width: 768px) {
     header{
         justify-content: space-between;
@@ -88,6 +148,19 @@ header img:hover{
     .logo-div{
         max-width: 140px;
     }
+
+    .buttons{
+        flex-direction: column;
+    }
+
+    .text h1{
+        font-size: 52px;
+    }
+
+    .text h2{
+        font-size: 24px;
+    }
+
 
     nav{
         width: 100%;
