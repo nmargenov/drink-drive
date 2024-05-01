@@ -1,17 +1,54 @@
 header{
+    position: fixed;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease; 
+}
+
+.background{
+    max-width: 100%;
+}
+
+.background img{
+    width: 100%;
+    height: 730px;
+    object-fit: cover;
 }
 
 ul{
     padding: 0px;
     display: flex;
     list-style: none;
-    background-color: red;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 7%, rgba(13,38,65,1) 50%, rgba(2,0,36,1) 93%);
+    padding: 10px 20px;
+    border-radius: 50px;
+    gap: 20px;
+    box-shadow:  5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+li{
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: rgb(91, 0, 91);
+    transition: 0.3s;
+}
+
+li:active{
+    opacity: 0.7;
+    transition: 0s;
 }
 
 .logo-div{
-    max-width: 220px;
+    max-width: 140px;
 }
 
 header img{
@@ -21,4 +58,52 @@ header img{
 header img:hover{
     transform: scale(1.15);
     transition: 0.6s;
+}
+
+#bars, #close{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.actions{
+    display: none;
+}
+@media only screen and (max-width: 992px) {
+    header{
+    }
+}
+@media only screen and (max-width: 768px) {
+    .opaque{
+    }
+    header{
+        justify-content: space-between;
+    }
+    nav{
+        width: 100%;
+        display: none;
+        position: absolute;
+        bottom: -150px;
+        right: 0;
+    }
+    ul{
+        flex-direction: column;
+        border-radius: 0px;
+        padding: 10px 0;
+        text-align: center;
+        padding: 0;
+        gap:0px;
+    }
+    li{
+        border-radius: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid gray;
+    }
+    .actions{
+        color:white;
+        display: block;
+    }
+    .visiable{
+        display: block;
+        transition: 0.5s ease-in-out;
+    }
 }
