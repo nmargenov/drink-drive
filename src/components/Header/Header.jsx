@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css"
-import { faBars, faClose, faX, } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX, } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
 export const Header = () =>{
