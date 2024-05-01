@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css"
 import { faBars, faX, } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
 
 export const Header = () =>{
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -13,40 +14,33 @@ export const Header = () =>{
     }
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const scrollTop = window.pageYOffset;
-
-      // Check if scrolled to the bottom
-      setIsScrolled(scrollTop > 100 );
-    }
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const scrollToTop = () =>{
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
+      if(isNavOpen){
+        toggleNav();
+      }
+    };
 
     return(
-        <>
-    <header className={styles['blurried']}>
+    <>
+    <header id="header" className={styles['blurried']}>
         <div className={styles['logo-div']}>
             <img onClick={scrollToTop} src='/images/logo.avif' alt="" />
         </div>
         <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
             <ul className={styles['blurried']}>
+                <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li>Услуги</li>
-                <li>Поръчай</li>
-                <li>За нас</li>
                 <li>Цени</li>
+                <li>Поръчай</li>
             </ul>
         </nav>
         <div className={styles['actions']}>

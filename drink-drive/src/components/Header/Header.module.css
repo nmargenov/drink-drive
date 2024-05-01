@@ -95,7 +95,7 @@ header img:hover{
     text-align: center;
 }
 
-span{
+.text span{
     color:red;
 }
 
@@ -132,6 +132,10 @@ button{
     border: none;
     width: 200px;
     height: 40px;
+}
+
+.active-nav{
+    color:#2298d8;
 }
 
 button:hover{
