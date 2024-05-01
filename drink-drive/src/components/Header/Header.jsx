@@ -33,14 +33,15 @@ export const Header = () =>{
 
     return(
         <>
-    <header className={isScrolled ? styles["opaque"] : ""}>
+    <header className={styles['blurried']}>
         <div className={styles['logo-div']}>
             <img src='/images/logo.avif' alt="" />
         </div>
-        <nav className={isNavOpen ? styles['visiable'] : ""}>
-            <ul>
+        <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
+            <ul className={styles['blurried']}>
                 <li>Услуги</li>
-                <li>Информация</li>
+                <li>Поръчай</li>
+                <li>За нас</li>
                 <li>Цени</li>
             </ul>
         </nav>
@@ -49,7 +50,7 @@ export const Header = () =>{
         </div>
     </header>
     <div className={styles["background"]}>
-        <img src="/images/car.png" alt="" />
+        <img src="/images/carmain.png" alt="" />
     </div>
     </>
 );
