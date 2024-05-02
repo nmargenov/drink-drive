@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css"
 import { faBars, faX, } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { CallUs } from "../CallUs/CallUs";
+import { OrderBtn } from "../OrderBtn/OrderBtn";
 
 
 export const Header = () =>{
@@ -55,8 +57,8 @@ export const Header = () =>{
             <h2><span>НЕ</span> шофирайте пили!</h2>
           </div>
           <div className={styles["buttons"]}>
-            <button onClick={()=>{window.location.href="tel:+359884000403"}}>Обади ни се</button>
-            <button>Поръчай онлайн</button>
+            <CallUs/>
+            <OrderBtn/>
           </div>
         </div>
     </div>

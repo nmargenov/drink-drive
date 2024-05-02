@@ -1,3 +1,4 @@
+import { CallUs } from "../CallUs/CallUs";
 import styles from "./Price.module.css";
 
 export const Price = () =>{
@@ -28,6 +29,7 @@ export const Price = () =>{
                     <p id={styles["para"]}>0.00лв.</p>
                 </div>
             </div>
+            <CallUs/>
         </div>
     );
 }

@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1000px;
-    padding: 20px 30px;
+    padding: 20px 30px 30px 30px;
     border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .price-div #heading{
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 20px;
+    margin: 20px 0;
     max-width: 800px;
     width: 100%;
 }
