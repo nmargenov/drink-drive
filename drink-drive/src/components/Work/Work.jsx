@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Work.module.css'
-import { faCar, faClock, faMobileAndroid, faMobileButton, faMobilePhone } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faClock, faMobileButton } from '@fortawesome/free-solid-svg-icons';
 
 export const Work = () =>{
     return(
