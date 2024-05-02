@@ -13,7 +13,7 @@ export const Price = () =>{
                 <div className={styles['price']}>
                     <h1>Цена на километър</h1>
                     <h2>2,40лв.</h2>
-                    <p id={styles["para"]}>+0,40лв. на минута</p>
+                    <p id={styles["para"]}>+0.40лв. на минута</p>
                 </div>
                 <div className={styles['price']}>
                     <h1>Работно време</h1>
