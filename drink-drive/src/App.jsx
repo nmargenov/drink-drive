@@ -11,8 +11,8 @@ function App(){
   return(
       <>
         <Header/>
-        <AboutUs/>
         <Work/>
+        <AboutUs/>
         <Price/>
         <Form/>
         <Area/>
