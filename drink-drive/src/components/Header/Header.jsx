@@ -60,6 +60,7 @@ export const Header = () =>{
             <CallUs/>
             <OrderBtn onClickHandler={scrollToElement}/>
           </div>
+          <p id={styles['plovdiv']}>24/7 на територията на гр.Пловдив</p>
         </div>
     </div>
     </>

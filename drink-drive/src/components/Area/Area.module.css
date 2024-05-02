@@ -1,0 +1,33 @@
+.area-div{
+    color:white;
+    font-family: 'Roboto Mono';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.area-div p{
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    
+    max-width: 400px;
+}
+
+.area-div img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.right{
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .area-div{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
