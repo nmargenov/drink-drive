@@ -12,8 +12,8 @@ function App(){
       <>
         <Header/>
         <Work/>
-        <AboutUs/>
         <Price/>
+        <AboutUs/>
         <Form/>
         <Area/>
         <Footer/>
