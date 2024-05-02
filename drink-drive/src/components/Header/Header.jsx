@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css"
 import { faBars, faX, } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CallUs } from "../CallUs/CallUs";
 import { OrderBtn } from "../OrderBtn/OrderBtn";
 
@@ -31,9 +31,26 @@ export const Header = () =>{
       }
     };
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      function handleScroll() {
+        const scrollTop = window.pageYOffset;
+  
+        // Check if scrolled to the bottom
+        setIsScrolled(scrollTop > 100 );
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return(
     <>
-    <header id="header" className={styles['blurried']}>
+    <header id="header" className={isScrolled ? styles['blurried'] : ""}>
         <div className={styles['logo-div']}>
             <img onClick={scrollToTop} src='/images/logo.avif' alt="" />
         </div>
