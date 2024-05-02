@@ -55,10 +55,10 @@ export const Header = () =>{
             <img onClick={scrollToTop} src='/images/logo.avif' alt="" />
         </div>
         <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
-            <ul className={styles['blurried']}>
+            <ul>
+                <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li onClick={()=>{scrollToElement('work')}}>Как работим</li>
                 <li onClick={()=>{scrollToElement('price')}}>Цени</li>
-                <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li onClick={()=>{scrollToElement('form')}}>Поръчай</li>
             </ul>
         </nav>
