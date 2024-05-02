@@ -9,14 +9,14 @@ export const Header = () =>{
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
-    if(isNavOpen){
-        
-    }
   };
 
 
   const scrollToTop = () =>{
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if(isNavOpen){
+      toggleNav();
+    }
   }
 
   const scrollToElement = (id) => {
@@ -39,7 +39,7 @@ export const Header = () =>{
             <ul className={styles['blurried']}>
                 <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li onClick={()=>{scrollToElement('work')}}>Как работим</li>
-                <li>Цени</li>
+                <li onClick={()=>{scrollToElement('price')}}>Цени</li>
                 <li>Поръчай</li>
             </ul>
         </nav>

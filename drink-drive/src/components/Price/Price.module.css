@@ -1,0 +1,82 @@
+.price-div{
+    font-family: 'Roboto Mono';
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    padding: 20px 30px;
+    border-top: 1px solid gray;
+}
+
+.price-div #heading{
+    margin: 0;
+}
+
+.price-div p{
+    margin: 0;
+    padding: 0;
+}
+
+.price-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.price{
+    background-color: rgb(2, 1, 1);
+    box-shadow: 0 0 10px #4379ee;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.free{
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    transform: translateY(80%) translateX(0%) translateX(35px) rotate(-315deg);
+    right: 0;
+    background-color: #61CE70;
+    padding: 5px 30px;
+}
+
+.price h1,h2,p{
+    margin:0;
+    padding:0;
+}
+
+.price h1{
+    background-color: #4379ee;
+    padding: 5px 40px;
+    font-size: 18px;
+}
+
+.price h2{
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+.price #para{
+    margin:10px 0 15px 0;
+}
+
+.price:nth-child(4) #para{
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .price-container{
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .price{
+        min-height: 115px;
+    }
+}
