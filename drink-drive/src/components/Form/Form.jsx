@@ -54,7 +54,7 @@ export const Form = () =>{
     }
 
     return(
-        <div className={styles['form-div']}>
+        <div id="form" className={styles['form-div']}>
             <form ref={formRef} onSubmit={onSubmit}>
                 <h2>Поръчай онлайн</h2>
                 <div className={styles['inputs']}>

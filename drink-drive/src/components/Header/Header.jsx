@@ -42,7 +42,7 @@ export const Header = () =>{
                 <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li onClick={()=>{scrollToElement('work')}}>Как работим</li>
                 <li onClick={()=>{scrollToElement('price')}}>Цени</li>
-                <li>Поръчай</li>
+                <li onClick={()=>{scrollToElement('form')}}>Поръчай</li>
             </ul>
         </nav>
         <div className={styles['actions']}>
@@ -58,7 +58,7 @@ export const Header = () =>{
           </div>
           <div className={styles["buttons"]}>
             <CallUs/>
-            <OrderBtn/>
+            <OrderBtn onClickHandler={scrollToElement}/>
           </div>
         </div>
     </div>
