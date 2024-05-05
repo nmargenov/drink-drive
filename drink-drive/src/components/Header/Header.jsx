@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css"
 import { faBars, faX, } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CallUs } from "../CallUs/CallUs";
 import { OrderBtn } from "../OrderBtn/OrderBtn";
 
@@ -31,14 +31,31 @@ export const Header = () =>{
       }
     };
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      function handleScroll() {
+        const scrollTop = window.pageYOffset;
+  
+        // Check if scrolled to the bottom
+        setIsScrolled(scrollTop > 100 );
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return(
     <>
-    <header id="header" className={styles['blurried']}>
+    <header id="header" className={isScrolled ? styles['blurried'] : ""}>
         <div className={styles['logo-div']}>
             <img onClick={scrollToTop} src='/images/logo.avif' alt="" />
         </div>
         <nav className={isNavOpen ? styles['visiable'] : styles['non-visiable']}>
-            <ul className={styles['blurried']}>
+            <ul>
                 <li onClick={()=>{scrollToElement('about-us')}}>За нас</li>
                 <li onClick={()=>{scrollToElement('work')}}>Как работим</li>
                 <li onClick={()=>{scrollToElement('price')}}>Цени</li>
@@ -60,6 +77,7 @@ export const Header = () =>{
             <CallUs/>
             <OrderBtn onClickHandler={scrollToElement}/>
           </div>
+          <p id={styles['plovdiv']}>24/7 на територията на гр.Пловдив</p>
         </div>
     </div>
     </>

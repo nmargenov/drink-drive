@@ -1,5 +1,6 @@
 import './App.css';
 import { AboutUs } from './components/AbousUs/AboutUs';
+import { Area } from './components/Area/Area';
 import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
@@ -14,6 +15,7 @@ function App(){
         <Work/>
         <Price/>
         <Form/>
+        <Area/>
         <Footer/>
       </>
 );
