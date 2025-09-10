@@ -16,7 +16,7 @@ export const Footer = () =>{
                  </div>
                  <div className={styles['contact']}>
                     <FontAwesomeIcon icon={faPhone}/>
-                    <p>0887 719 696</p>
+                    <p>{import.meta.env.VITE_APP_PHONE_FORMAT}</p>
                  </div>
             </div>
             <div className={styles['third']}>

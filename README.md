@@ -19,5 +19,7 @@ You need a registration in [EmailJS](https://www.emailjs.com/). Follow the steps
 ```
 VITE_APP_SERVICE_ID = Service ID provided by EmailJS
 VITE_APP_TEMPLATE_ID = Template ID provided by EmailJS
-VITE_APP_PUBLIC_KEY =  = Public Key provided by EmailJS
+VITE_APP_PUBLIC_KEY = Public Key provided by EmailJS
+VITE_APP_PHONE = Raw number, used for links, example: +359880000000
+VITE_APP_PHONE_FORMAT = Use this for how the number will be displayed on the site, example: 0880 000 000
  ```

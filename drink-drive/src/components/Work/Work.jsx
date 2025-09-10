@@ -12,7 +12,7 @@ export const Work = () =>{
                     <FontAwesomeIcon id={styles["icon"]} icon={faMobileButton}/>
                     <h3>Стъпка 1</h3>
                     <p>Свържете се с нас, уточнете вашата локация и автомобил.</p>
-                    <p>Тел: 0887 719 696</p>
+                    <p>Тел: {import.meta.env.VITE_APP_PHONE_FORMAT}</p>
                 </div>
                 <div className={styles['step']}>
                     <FontAwesomeIcon id={styles["icon"]} icon={faClock}/>
